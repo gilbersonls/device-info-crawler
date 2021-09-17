@@ -1,0 +1,19 @@
+{
+  "name": "device-info-crawler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "gilbersonls@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer-extra": "^3.1.18",
+    "puppeteer-extra-plugin-adblocker": "^2.11.11",
+    "puppeteer-extra-plugin-stealth": "^2.7.8"
+  },
+  "devDependencies": {
+    "lambda-local": "^2.0.0",
+    "puppeteer": "^10.2.0"
+  },
+  "scripts": {
+    "start": "lambda-local -l index.js -t 300000 -W 8080"
+  }
+}

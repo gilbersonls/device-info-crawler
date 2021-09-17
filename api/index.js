@@ -1,7 +1,6 @@
 const puppeteer = require("puppeteer-extra").default;
 const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 const AdblockerPlugin = require("puppeteer-extra-plugin-adblocker");
-const app = require("express")();
 
 puppeteer.use(StealthPlugin());
 puppeteer.use(AdblockerPlugin());
@@ -42,13 +41,11 @@ const crawling = async (deviceModel) => {
   return result;
 };
 
-app.get("/api", async (req, res) => {
+module.exports = async (req, res) => {
   if (!req.query || !req.query.device_model)
     throw new Error("the device_model param must be present.");
 
   res.statusCode = 200;
   res.setHeader("Content-Type", "application/json");
   res.json(await crawling(req.query.device_model));
-});
-
-module.exports = app;
+};

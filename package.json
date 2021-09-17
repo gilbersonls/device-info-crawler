@@ -5,17 +5,13 @@
   "author": "gilbersonls@gmail.com",
   "private": true,
   "dependencies": {
-    "express": "^4.17.1",
+    "puppeteer": "^10.2.0",
     "puppeteer-extra": "^3.1.18",
     "puppeteer-extra-plugin-adblocker": "^2.11.11",
     "puppeteer-extra-plugin-stealth": "^2.7.8"
   },
-  "devDependencies": {
-    "lambda-local": "^2.0.0",
-    "puppeteer": "^10.2.0"
-  },
+  "devDependencies": {},
   "scripts": {
-    "start": "lambda-local -l index.js -t 300000 -W 8080",
-    "build": "AWS_LAMBDA_FUNCTION_NAME=true node index.js"
+    "start": "vercel dev"
   }
 }

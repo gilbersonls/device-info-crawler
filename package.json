@@ -1,10 +1,11 @@
 {
   "name": "device-info-crawler",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "api/index.js",
   "author": "gilbersonls@gmail.com",
   "private": true,
   "dependencies": {
+    "express": "^4.17.1",
     "puppeteer-extra": "^3.1.18",
     "puppeteer-extra-plugin-adblocker": "^2.11.11",
     "puppeteer-extra-plugin-stealth": "^2.7.8"
